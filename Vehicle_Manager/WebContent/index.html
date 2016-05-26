@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="js/font-awesome/css/font-awesome.min.css" />
+<script type="text/javascript" src="js/third-party/angular.js"></script>
+<script type="text/javascript" src="js/third-party/angular-sanitize.js"></script>
+<script type="text/javascript" src="js/third-party/angular-resource.js"></script>
+<script type="text/javascript" src="js/third-party/ui-bootstrap-tpls.js"></script>
+<script type="text/javascript" src="js/third-party/angular-ui-router.js"></script>
+
+
+    <script type="text/javascript" src="js/bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+<body ng-app="vehicle-manager">
+<div ng-controller="vehicleCtrl as ctrl">
+        <form role="form">
+            <div class="col-lg-6">
+                <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>
+                <div class="form-group">
+                    <label for="VehicleId">Vehicle Id</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" ng-model="ctrl.vehicleId" placeholder="Enter ID here" required/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="VehicleName">Vehicle Name</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" ng-model="ctrl.vehicleName" placeholder="Enter Vehicle name here"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="VehicleType">Vehicle Type</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" ng-model="ctrl.vehicleType" placeholder="Enter Vehicle type here" required/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <input type="submit" name="submit" id="submit" value="Add" ng-click="ctrl.addVehicle()" class="btn btn-info pull-right">
+                <input type="submit" name="submit" id="submit" value="Update" ng-click="ctrl.updateVehicle(ctrl.vehicleId)" class="btn btn-info pull-right">
+            </div>
+        </form>
+</div>
+<script type="text/javascript" src="js/controller/vehicleCtrl.js"></script>    
+</body>
+</html>
